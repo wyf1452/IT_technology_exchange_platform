@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+    <!--    根据mapper接口的全类名找到映射文件，早根据方法名找到指定，id和方法名相同，mapper接口中方法的方法名和映射文件中编写SQL的标签的id属性保持一致-->
+    <select id="SelectUserByPwdAndUserId" resultType="java.lang.Integer">
+        select count(*) from user where password=#{pwd} and userid=#{id}
+    </select>
+</mapper>
